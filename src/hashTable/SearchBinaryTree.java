@@ -1,3 +1,5 @@
+package hashTable;
+
 import java.io.Serializable;
 
 public class SearchBinaryTree<T> {
