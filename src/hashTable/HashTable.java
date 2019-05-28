@@ -2,7 +2,7 @@ package hashTable;
 
 import java.util.LinkedList;
 
-public class  HashTable<T extends Hashable & Comparable<T> & Printeable> {
+public class  HashTable<T extends Hashable & Comparable<T>> {
 
     private LinkedList<T>[] list;
     private int capacity;
@@ -77,25 +77,4 @@ public class  HashTable<T extends Hashable & Comparable<T> & Printeable> {
         return list[k];
     }
 
-    public LinkedList<T>[] getLists() {
-        return list;
-    }
-
-    public int getCapacity() {
-        return capacity;
-    }
-
-    public void print() {
-        for (int i = 0; i < list.length; i++) {
-            //list[i].goTo(1);
-            System.out.println("In "+ i +": ");
-            for (int j = 0; j < list[i].size(); j++) {
-                list[i].get(j).print();
-                try {
-                    //list[i].goNext();
-                }
-                catch (IndexOutOfBoundsException ignored) {}
-            }
-        }
-    }
 }

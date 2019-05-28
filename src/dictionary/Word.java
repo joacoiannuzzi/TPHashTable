@@ -1,9 +1,8 @@
 package dictionary;
 
 import hashTable.Hashable;
-import hashTable.Printeable;
 
-public class Word implements Hashable, Comparable<Word>, Printeable {
+public class Word implements Hashable, Comparable<Word> {
 
     private String word;
 
@@ -28,10 +27,5 @@ public class Word implements Hashable, Comparable<Word>, Printeable {
 
     public String getWord() {
         return word;
-    }
-
-    @Override
-    public void print(){
-        System.out.println("\t" + word);
     }
 }
