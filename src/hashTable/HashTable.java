@@ -40,7 +40,21 @@ public class  HashTable<T extends Hashable & Comparable<T> & Printeable> {
                 return list[k].get(i);
             //list[k].goNext();
         }
-        return x;
+        return null;
+    }
+
+    public T delete(T x) {
+        int k = x.hash(capacity);
+        //list[k].goTo(0);
+        for (int i = 0 ; i < list[k].size() ; i ++ )  {
+            if (x.compareTo(list[k].get(i)) == 0) {
+                T temp = list[k].get(i);
+                list[k].remove(i);
+                return temp;
+            }
+            //list[k].goNext();
+        }
+        return null;
     }
 
     public SearchBinaryTree getSearchBinaryTree () {
